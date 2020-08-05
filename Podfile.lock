@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (4.9.1)
+  - LiteRoute (2.1.21)
+  - SwiftyJSON (5.0.0)
+  - Swinject (2.6.2)
+  - SwinjectStoryboard (2.2.0):
+    - Swinject (~> 2.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.1)
+  - LiteRoute (from `https://github.com/SpectralDragon/LiteRoute.git`)
+  - SwiftyJSON
+  - Swinject (~> 2.6.2)
+  - SwinjectStoryboard
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SwiftyJSON
+    - Swinject
+    - SwinjectStoryboard
+
+EXTERNAL SOURCES:
+  LiteRoute:
+    :git: https://github.com/SpectralDragon/LiteRoute.git
+
+CHECKOUT OPTIONS:
+  LiteRoute:
+    :commit: b0c65a5a894489e38eb2bdda1c8977a22d824ff0
+    :git: https://github.com/SpectralDragon/LiteRoute.git
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  LiteRoute: 0de115c90e3d8927ba8ae039f13a3b8a41a1ead5
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: cf7458774b1b00323080a9c67e47a1ee7f9d2af1
+  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+
+PODFILE CHECKSUM: a5991ac33b9e08721d2a2cfac196170946a26c86
+
+COCOAPODS: 1.8.4
