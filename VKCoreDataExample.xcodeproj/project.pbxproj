@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E41351524F2B78B0021B307 /* CollapseExpandViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E41351424F2B78B0021B307 /* CollapseExpandViewDelegate.swift */; };
+		3E41351924F2C49F0021B307 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E41351824F2C49F0021B307 /* NoteCollectionViewCell.swift */; };
+		3E41351B24F2EB960021B307 /* NoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E41351A24F2EB960021B307 /* NoteCollectionViewCell.xib */; };
+		3E41351E24F2F0F80021B307 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E41351D24F2F0F80021B307 /* UIColorExtension.swift */; };
 		3E42C22124D9BFA1002856CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E42C22024D9BFA1002856CD /* AppDelegate.swift */; };
 		3E42C22324D9BFA1002856CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E42C22224D9BFA1002856CD /* SceneDelegate.swift */; };
 		3E42C22B24D9BFA1002856CD /* VKCoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E42C22924D9BFA1002856CD /* VKCoreDataExample.xcdatamodeld */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E41351424F2B78B0021B307 /* CollapseExpandViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapseExpandViewDelegate.swift; sourceTree = "<group>"; };
+		3E41351824F2C49F0021B307 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E41351A24F2EB960021B307 /* NoteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E41351D24F2F0F80021B307 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3E42C21D24D9BFA1002856CD /* VKCoreDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKCoreDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E42C22024D9BFA1002856CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E42C22224D9BFA1002856CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +76,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E41351324F2B76E0021B307 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3E41351C24F2F0E80021B307 /* Extensions */,
+				3E41351724F2C48B0021B307 /* CollectionViewCells */,
+				3E41351624F2C4700021B307 /* Protocols&Delegates */,
+				3E41351424F2B78B0021B307 /* CollapseExpandViewDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3E41351624F2C4700021B307 /* Protocols&Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Protocols&Delegates";
+			sourceTree = "<group>";
+		};
+		3E41351724F2C48B0021B307 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3E41351824F2C49F0021B307 /* NoteCollectionViewCell.swift */,
+				3E41351A24F2EB960021B307 /* NoteCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		3E41351C24F2F0E80021B307 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E41351D24F2F0F80021B307 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3E42C21424D9BFA1002856CD = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +147,8 @@
 		3E42C23724D9C018002856CD /* MainSceenUserStory */ = {
 			isa = PBXGroup;
 			children = (
-				3E42C23824D9C018002856CD /* Storyboard */,
 				3E42C23A24D9C018002856CD /* Module */,
+				3E42C23824D9C018002856CD /* Storyboard */,
 			);
 			path = MainSceenUserStory;
 			sourceTree = "<group>";
@@ -187,6 +230,7 @@
 		3E42C25C24D9C035002856CD /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3E41351324F2B76E0021B307 /* Common */,
 				3E42C25D24D9C041002856CD /* UserStories */,
 			);
 			path = PresentationLayer;
@@ -294,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E41351B24F2EB960021B307 /* NoteCollectionViewCell.xib in Resources */,
 				3E42C23024D9BFA9002856CD /* LaunchScreen.storyboard in Resources */,
 				3E42C22D24D9BFA9002856CD /* Assets.xcassets in Resources */,
 				3E42C25F24D9C675002856CD /* Main.storyboard in Resources */,
@@ -349,9 +394,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E41351524F2B78B0021B307 /* CollapseExpandViewDelegate.swift in Sources */,
 				3E42C25524D9C018002856CD /* MainScreenViewController.swift in Sources */,
 				3E42C25B24D9C018002856CD /* MainScreenRouterInput.swift in Sources */,
 				3E42C25824D9C018002856CD /* MainScreenInteractor.swift in Sources */,
+				3E41351E24F2F0F80021B307 /* UIColorExtension.swift in Sources */,
 				3E42C25424D9C018002856CD /* MainScreenViewInput.swift in Sources */,
 				3E42C25A24D9C018002856CD /* MainScreenRouter.swift in Sources */,
 				3E42C25324D9C018002856CD /* MainScreenModuleInput.swift in Sources */,
@@ -363,6 +410,7 @@
 				3E42C22B24D9BFA1002856CD /* VKCoreDataExample.xcdatamodeld in Sources */,
 				3E42C25924D9C018002856CD /* MainScreenInteractorInput.swift in Sources */,
 				3E42C25224D9C018002856CD /* MainScreenPresenter.swift in Sources */,
+				3E41351924F2C49F0021B307 /* NoteCollectionViewCell.swift in Sources */,
 				3E42C25724D9C018002856CD /* MainScreenInteractorOutput.swift in Sources */,
 				3E42C22324D9BFA1002856CD /* SceneDelegate.swift in Sources */,
 			);
