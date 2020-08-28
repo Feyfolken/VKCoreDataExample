@@ -11,6 +11,7 @@ import UIKit
 /// Протокол, реализуемый классом, в котором делегатом UIScrollViewDelegate является CollapseExpandViewDelegate, когда есть необходимость переопределить реализацию методов UIScrollViewDelegate.
 public protocol CollapseExpandViewDelegateListener: UIScrollViewDelegate {
      func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
 }
 
 extension CollapseExpandViewDelegateListener {
@@ -266,4 +267,8 @@ extension CollapseExpandViewDelegate: UIScrollViewDelegate {
 }
 
 extension CollapseExpandViewDelegate: UICollectionViewDelegate {
+    
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        listener?.collectionView(collectionView, didSelectItemAt: indexPath)
+    }
 }

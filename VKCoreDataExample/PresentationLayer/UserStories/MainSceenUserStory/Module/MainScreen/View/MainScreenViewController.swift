@@ -15,6 +15,7 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var counterDescriptionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addNoteButton: UIButton!
     
     var output: MainScreenViewOutput!
     private var collapseExpandViewDelegate: CollapseExpandViewDelegate!
@@ -24,6 +25,11 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         
         output.viewIsReady()
+    }
+    
+    // MARK: IBActions
+    @IBAction func didTapAddNoteButton(_ sender: Any) {
+        output.didTapAddNoteButton()
     }
     
     // MARK: Private methods
@@ -44,9 +50,12 @@ class MainScreenViewController: UIViewController {
                                                                     headerView: headerView,
                                                                     viewController: self,
                                                                     shouldSetupRoundCorners: true)
-          
+        collapseExpandViewDelegate.listener = self
+        
         collectionView.delegate = collapseExpandViewDelegate
         collectionView.dataSource = self
+        
+        collectionView.frame.origin.y = headerView.frame.maxY + 50
     }
 }
 
@@ -54,6 +63,8 @@ class MainScreenViewController: UIViewController {
 extension MainScreenViewController: MainScreenViewInput {
     
     func setupInitialState() {
+        self.title = "Notes"
+        
         setupCounterViewInitialState()
         setupCollectionViewInitialState()
         setupCounterDescriptionLabelInitialState()
@@ -61,6 +72,9 @@ extension MainScreenViewController: MainScreenViewInput {
         headerView.backgroundColor = .dc_AsphaltGray
     }
     
+    func presentAlertController(_ alertController: UIAlertController, animated: Bool) {
+        present(alertController, animated: animated, completion: nil)
+    }
 }
 
 // MARK: UICollectionViewDataSource
@@ -77,13 +91,18 @@ extension MainScreenViewController: UICollectionViewDataSource {
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        return CGSize(width: UIScreen.main.bounds.width, height: 130)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return CGSize(width: UIScreen.main.bounds.width, height: 130)
+    }
 }
 
 // MARK: UICollectionViewDelegate
-extension MainScreenViewController: UICollectionViewDelegate {
+extension MainScreenViewController: CollapseExpandViewDelegateListener {
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {}
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        output.didSelectCell(at: indexPath)
+    }
 }

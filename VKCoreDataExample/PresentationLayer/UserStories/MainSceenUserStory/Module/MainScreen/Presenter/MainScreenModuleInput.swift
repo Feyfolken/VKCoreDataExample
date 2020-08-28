@@ -8,5 +8,4 @@
 
 protocol MainScreenModuleInput: class {
     
-    
 }

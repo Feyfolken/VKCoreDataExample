@@ -10,4 +10,5 @@ import UIKit
 protocol MainScreenViewInput: class {
 
     func setupInitialState()
+    func presentAlertController(_ alertController: UIAlertController, animated: Bool)
 }
