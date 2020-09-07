@@ -19,6 +19,7 @@ class MainScreenViewController: UIViewController {
     
     var output: MainScreenViewOutput!
     private var collapseExpandViewDelegate: CollapseExpandViewDelegate!
+    private var notesArray: [Note] = []
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -56,6 +57,11 @@ class MainScreenViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.frame.origin.y = headerView.frame.maxY + 50
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 150, right: 0)
+    }
+    
+    private func updateCounter() {
+        counterLabel.text = "\(notesArray.count)"
     }
 }
 
@@ -64,7 +70,9 @@ extension MainScreenViewController: MainScreenViewInput {
     
     func setupInitialState() {
         self.title = "Notes"
+        navigationController?.navigationBar.backgroundColor = .dc_BrightYellow
         
+        updateCounter()
         setupCounterViewInitialState()
         setupCollectionViewInitialState()
         setupCounterDescriptionLabelInitialState()
@@ -75,18 +83,43 @@ extension MainScreenViewController: MainScreenViewInput {
     func presentAlertController(_ alertController: UIAlertController, animated: Bool) {
         present(alertController, animated: animated, completion: nil)
     }
+    
+    func updateNotesAfterObtaining(_ notes: [Note]) {
+        notesArray = notes
+        updateCounter()
+        
+        collectionView.reloadData()
+    }
+    
+    func updateNotesAfterAdding(_ note: Note) {
+        notesArray.append(note)
+        updateCounter()
+        
+        collectionView.reloadData()
+    }
+    
+    func updateNotesAfterUpdating(with note: Note, for index: Int) {
+        notesArray.remove(at: index)
+        notesArray.insert(note, at: index)
+        
+        updateCounter()
+        collectionView.reloadData()
+    }
 }
 
 // MARK: UICollectionViewDataSource
 extension MainScreenViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return notesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "noteCell", for: indexPath) as! NoteCollectionViewCell
         
-        cell.noteLabel.text = "  Note Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Noteote Note Note ote Note Note "
+        cell.noteLabel.text = notesArray[indexPath.row].text
+        cell.note = notesArray[indexPath.row]
+        cell.delegate = self
         
         return cell
     }
@@ -103,6 +136,13 @@ extension MainScreenViewController: CollapseExpandViewDelegateListener {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        output.didSelectCell(at: indexPath)
+        output.didSelectCell(at: indexPath, item: notesArray[indexPath.row])
+    }
+}
+
+extension MainScreenViewController: NoteCollectionViewCellDelegate {
+    
+    func didTapDeleteButton(note: Note) {
+        output.didTapDeleteNoteButton(note: note)
     }
 }

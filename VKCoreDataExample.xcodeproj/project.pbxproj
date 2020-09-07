@@ -30,6 +30,9 @@
 		3E42C25F24D9C675002856CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E42C25E24D9C675002856CD /* Main.storyboard */; };
 		3E42C26324D9C7A6002856CD /* ApplicationAssemblyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E42C26224D9C7A6002856CD /* ApplicationAssemblyHelper.swift */; };
 		3E42C26524D9C7BC002856CD /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E42C26424D9C7BC002856CD /* ApplicationAssembly.swift */; };
+		3E4EAE5024FE3DB900F344B7 /* DataStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EAE4F24FE3DB900F344B7 /* DataStorageService.swift */; };
+		3E4EAE5224FE41B100F344B7 /* DataStorageServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EAE5124FE41B100F344B7 /* DataStorageServiceImplementation.swift */; };
+		3E4EAE5524FE9D2400F344B7 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EAE5424FE9D2400F344B7 /* ServicesAssembly.swift */; };
 		B807C8F5B405576E7B570043 /* Pods_VKCoreDataExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF6D1E727B733B233EB7640 /* Pods_VKCoreDataExample.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		3E42C25E24D9C675002856CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3E42C26224D9C7A6002856CD /* ApplicationAssemblyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssemblyHelper.swift; sourceTree = "<group>"; };
 		3E42C26424D9C7BC002856CD /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		3E4EAE4F24FE3DB900F344B7 /* DataStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageService.swift; sourceTree = "<group>"; };
+		3E4EAE5124FE41B100F344B7 /* DataStorageServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorageServiceImplementation.swift; sourceTree = "<group>"; };
+		3E4EAE5424FE9D2400F344B7 /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		86CFAD5EDC037E1090319CEC /* Pods-VKCoreDataExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKCoreDataExample.debug.xcconfig"; path = "Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample.debug.xcconfig"; sourceTree = "<group>"; };
 		9EF6D1E727B733B233EB7640 /* Pods_VKCoreDataExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKCoreDataExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8027CD5E17B6BAF08AC4AF /* Pods-VKCoreDataExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKCoreDataExample.release.xcconfig"; path = "Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +88,6 @@
 				3E41351C24F2F0E80021B307 /* Extensions */,
 				3E41351724F2C48B0021B307 /* CollectionViewCells */,
 				3E41351624F2C4700021B307 /* Protocols&Delegates */,
-				3E41351424F2B78B0021B307 /* CollapseExpandViewDelegate.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 		3E41351624F2C4700021B307 /* Protocols&Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				3E41351424F2B78B0021B307 /* CollapseExpandViewDelegate.swift */,
 			);
 			path = "Protocols&Delegates";
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 			children = (
 				3E42C26024D9C77B002856CD /* ApplicationLayer */,
 				3E42C25C24D9C035002856CD /* PresentationLayer */,
+				3E4EAE4D24FE3D0C00F344B7 /* BusinessLogicLayer */,
 				3E42C22024D9BFA1002856CD /* AppDelegate.swift */,
 				3E42C22224D9BFA1002856CD /* SceneDelegate.swift */,
 				3E42C22C24D9BFA9002856CD /* Assets.xcassets */,
@@ -192,8 +199,8 @@
 		3E42C23E24D9C018002856CD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				3E42C24124D9C018002856CD /* MainScreenPresenter.swift */,
 				3E42C24224D9C018002856CD /* MainScreenModuleInput.swift */,
+				3E42C24124D9C018002856CD /* MainScreenPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -211,9 +218,9 @@
 		3E42C24724D9C018002856CD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				3E42C24824D9C018002856CD /* MainScreenInteractorOutput.swift */,
-				3E42C24924D9C018002856CD /* MainScreenInteractor.swift */,
 				3E42C24A24D9C018002856CD /* MainScreenInteractorInput.swift */,
+				3E42C24924D9C018002856CD /* MainScreenInteractor.swift */,
+				3E42C24824D9C018002856CD /* MainScreenInteractorOutput.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -259,6 +266,32 @@
 				3E42C26424D9C7BC002856CD /* ApplicationAssembly.swift */,
 			);
 			path = ApplicationAssembly;
+			sourceTree = "<group>";
+		};
+		3E4EAE4D24FE3D0C00F344B7 /* BusinessLogicLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3E4EAE5324FE9D1100F344B7 /* ServicesAssembly */,
+				3E4EAE4E24FE3D2000F344B7 /* Services */,
+			);
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		3E4EAE4E24FE3D2000F344B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E4EAE4F24FE3DB900F344B7 /* DataStorageService.swift */,
+				3E4EAE5124FE41B100F344B7 /* DataStorageServiceImplementation.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3E4EAE5324FE9D1100F344B7 /* ServicesAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				3E4EAE5424FE9D2400F344B7 /* ServicesAssembly.swift */,
+			);
+			path = ServicesAssembly;
 			sourceTree = "<group>";
 		};
 		417B256BA261F0D58B3DD53B /* Frameworks */ = {
@@ -396,6 +429,8 @@
 			files = (
 				3E41351524F2B78B0021B307 /* CollapseExpandViewDelegate.swift in Sources */,
 				3E42C25524D9C018002856CD /* MainScreenViewController.swift in Sources */,
+				3E4EAE5224FE41B100F344B7 /* DataStorageServiceImplementation.swift in Sources */,
+				3E4EAE5524FE9D2400F344B7 /* ServicesAssembly.swift in Sources */,
 				3E42C25B24D9C018002856CD /* MainScreenRouterInput.swift in Sources */,
 				3E42C25824D9C018002856CD /* MainScreenInteractor.swift in Sources */,
 				3E41351E24F2F0F80021B307 /* UIColorExtension.swift in Sources */,
@@ -409,6 +444,7 @@
 				3E42C22124D9BFA1002856CD /* AppDelegate.swift in Sources */,
 				3E42C22B24D9BFA1002856CD /* VKCoreDataExample.xcdatamodeld in Sources */,
 				3E42C25924D9C018002856CD /* MainScreenInteractorInput.swift in Sources */,
+				3E4EAE5024FE3DB900F344B7 /* DataStorageService.swift in Sources */,
 				3E42C25224D9C018002856CD /* MainScreenPresenter.swift in Sources */,
 				3E41351924F2C49F0021B307 /* NoteCollectionViewCell.swift in Sources */,
 				3E42C25724D9C018002856CD /* MainScreenInteractorOutput.swift in Sources */,

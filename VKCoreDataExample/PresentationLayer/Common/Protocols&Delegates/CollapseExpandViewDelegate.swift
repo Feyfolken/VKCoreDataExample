@@ -189,13 +189,13 @@ public class CollapseExpandViewDelegate: NSObject {
         let newHeaderViewHeight: CGFloat = expandableViewVerticalSpacingToHeaderViewTop - scrollView.contentOffset.y
         
         if newHeaderViewHeight > maxHeight {
-            headerView.alpha = 1
+            headerView.backgroundColor = .dc_AsphaltGray
             
         } else if newHeaderViewHeight < minHeight {
-            headerView.alpha = 1
-            
+            headerView.backgroundColor = .dc_BrightYellow
+
         } else {
-            headerView.alpha = (newHeaderViewHeight * 1) / maxScrollValue()
+            headerView.backgroundColor = .dc_BrightYellow
         }
     }
     
@@ -242,7 +242,8 @@ extension CollapseExpandViewDelegate: UIScrollViewDelegate {
         
         let newHeaderViewHeight: CGFloat = expandableViewVerticalSpacingToHeaderViewTop - currentOffsetY
         
-        changeHeaderViewAlphaRelativeExpandableViewPosition(with: scrollView)
+//        changeHeaderViewAlphaRelativeExpandableViewPosition(with: scrollView)
+        
         adjustExpandedViewFrameAccordingToNewHeaderViewHeight(newHeaderViewHeight, scrollView: scrollView)
         
         listener?.scrollViewDidScroll?(scrollView)

@@ -11,5 +11,6 @@ protocol MainScreenViewOutput {
 
     func viewIsReady()
     func didTapAddNoteButton()
-    func didSelectCell(at indexPath: IndexPath)
+    func didTapDeleteNoteButton(note: Note)
+    func didSelectCell(at indexPath: IndexPath, item: Note)
 }
