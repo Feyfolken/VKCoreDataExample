@@ -1,0 +1,134 @@
+Pods/Manifest.lock
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/LiteRoute/LICENSE.txt
+Pods/LiteRoute/README.md
+Pods/LiteRoute/Sources/EmbedSegue.swift
+Pods/LiteRoute/Sources/LiteRoute.swift
+Pods/LiteRoute/Sources/LiteRouteErrors.swift
+Pods/LiteRoute/Sources/StoryboardFactory.swift
+Pods/LiteRoute/Sources/UIViewController+Extension.swift
+Pods/LiteRoute/Sources/Protocols/StoryboardFactoryProtocol.swift
+Pods/LiteRoute/Sources/Protocols/TransitionHandler.swift
+Pods/LiteRoute/Sources/Protocols/ViewContainerForEmbedSegue.swift
+Pods/LiteRoute/Sources/TransitionNodes/CloseTransitionNode.swift
+Pods/LiteRoute/Sources/TransitionNodes/CustomTransitionNode.swift
+Pods/LiteRoute/Sources/TransitionNodes/GenericTransitionNode.swift
+Pods/LiteRoute/Sources/TransitionNodes/SegueTransitionNode.swift
+Pods/LiteRoute/Sources/TransitionNodes/TransitionNode.swift
+Pods/Local Podspecs/LiteRoute.podspec.json
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/Alamofire.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/LiteRoute.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/Pods-VKCoreDataExample.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/SwiftyJSON.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/Swinject.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/SwinjectStoryboard.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/feyfolken.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/SwiftyJSON/LICENSE
+Pods/SwiftyJSON/README.md
+Pods/SwiftyJSON/Source/SwiftyJSON/SwiftyJSON.swift
+Pods/Swinject/LICENSE.txt
+Pods/Swinject/README.md
+Pods/Swinject/Sources/_Resolver.swift
+Pods/Swinject/Sources/Assembler.swift
+Pods/Swinject/Sources/Assembly.swift
+Pods/Swinject/Sources/Behavior.swift
+Pods/Swinject/Sources/Container.Arguments.swift
+Pods/Swinject/Sources/Container.Logging.swift
+Pods/Swinject/Sources/Container.swift
+Pods/Swinject/Sources/Container.TypeForwarding.swift
+Pods/Swinject/Sources/DebugHelper.swift
+Pods/Swinject/Sources/FunctionType.swift
+Pods/Swinject/Sources/GraphIdentifier.swift
+Pods/Swinject/Sources/InstanceStorage.swift
+Pods/Swinject/Sources/InstanceWrapper.swift
+Pods/Swinject/Sources/ObjectScope.Standard.swift
+Pods/Swinject/Sources/ObjectScope.swift
+Pods/Swinject/Sources/Resolver.swift
+Pods/Swinject/Sources/ServiceEntry.swift
+Pods/Swinject/Sources/ServiceEntry.TypeForwarding.swift
+Pods/Swinject/Sources/ServiceKey.swift
+Pods/Swinject/Sources/SpinLock.swift
+Pods/Swinject/Sources/Swinject.h
+Pods/Swinject/Sources/SynchronizedResolver.Arguments.swift
+Pods/Swinject/Sources/SynchronizedResolver.swift
+Pods/Swinject/Sources/UnavailableItems.swift
+Pods/SwinjectStoryboard/LICENSE.txt
+Pods/SwinjectStoryboard/README.md
+Pods/SwinjectStoryboard/Sources/Box.swift
+Pods/SwinjectStoryboard/Sources/Container+SwinjectStoryboard.swift
+Pods/SwinjectStoryboard/Sources/InjectionVerifiable.swift
+Pods/SwinjectStoryboard/Sources/RegistrationNameAssociatable.swift
+Pods/SwinjectStoryboard/Sources/SwinjectStoryboard+SetUp.m
+Pods/SwinjectStoryboard/Sources/SwinjectStoryboard+StoryboardReference.swift
+Pods/SwinjectStoryboard/Sources/SwinjectStoryboard.h
+Pods/SwinjectStoryboard/Sources/SwinjectStoryboard.swift
+Pods/SwinjectStoryboard/Sources/SwinjectStoryboardOption.swift
+Pods/SwinjectStoryboard/Sources/SwinjectStoryboardProtocol.h
+Pods/SwinjectStoryboard/Sources/UnavailableItems.swift
+Pods/SwinjectStoryboard/Sources/ViewController+Swinject.swift
+Pods/SwinjectStoryboard/Sources/iOS-tvOS/_SwinjectStoryboardBase.h
+Pods/SwinjectStoryboard/Sources/iOS-tvOS/_SwinjectStoryboardBase.m
+Pods/SwinjectStoryboard/Sources/iOS-tvOS/UIStoryboard+Swizzling.h
+Pods/SwinjectStoryboard/Sources/iOS-tvOS/UIStoryboard+Swizzling.m
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/LiteRoute/LiteRoute-dummy.m
+Pods/Target Support Files/LiteRoute/LiteRoute-Info.plist
+Pods/Target Support Files/LiteRoute/LiteRoute-prefix.pch
+Pods/Target Support Files/LiteRoute/LiteRoute-umbrella.h
+Pods/Target Support Files/LiteRoute/LiteRoute.modulemap
+Pods/Target Support Files/LiteRoute/LiteRoute.xcconfig
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-acknowledgements.markdown
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-acknowledgements.plist
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-dummy.m
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-frameworks.sh
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-Info.plist
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample-umbrella.h
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample.debug.xcconfig
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample.modulemap
+Pods/Target Support Files/Pods-VKCoreDataExample/Pods-VKCoreDataExample.release.xcconfig
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-dummy.m
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.modulemap
+Pods/Target Support Files/SwiftyJSON/SwiftyJSON.xcconfig
+Pods/Target Support Files/Swinject/Swinject-dummy.m
+Pods/Target Support Files/Swinject/Swinject-Info.plist
+Pods/Target Support Files/Swinject/Swinject-prefix.pch
+Pods/Target Support Files/Swinject/Swinject-umbrella.h
+Pods/Target Support Files/Swinject/Swinject.modulemap
+Pods/Target Support Files/Swinject/Swinject.xcconfig
+Pods/Target Support Files/SwinjectStoryboard/SwinjectStoryboard-dummy.m
+Pods/Target Support Files/SwinjectStoryboard/SwinjectStoryboard-Info.plist
+Pods/Target Support Files/SwinjectStoryboard/SwinjectStoryboard-prefix.pch
+Pods/Target Support Files/SwinjectStoryboard/SwinjectStoryboard-umbrella.h
+Pods/Target Support Files/SwinjectStoryboard/SwinjectStoryboard.modulemap
+Pods/Target Support Files/SwinjectStoryboard/SwinjectStoryboard.xcconfig

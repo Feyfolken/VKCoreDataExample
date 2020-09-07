@@ -16,7 +16,8 @@ class MainScreenAssemblyContainer: Assembly {
 		container.register(MainScreenInteractor.self) { (r, presenter: MainScreenPresenter) in
 			let interactor = MainScreenInteractor()
 			interactor.output = presenter
-			
+            interactor.dataStorageService = r.resolve(DataStorageService.self)
+            
 			return interactor
 		}
 		
@@ -35,7 +36,7 @@ class MainScreenAssemblyContainer: Assembly {
 			
 			return presenter
 		}
-		
+        
 		container.storyboardInitCompleted(MainScreenViewController.self) { r, viewController in
 			viewController.output = r.resolve(MainScreenPresenter.self, argument: viewController)
 		}

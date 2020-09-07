@@ -10,4 +10,8 @@ import Foundation
 
 protocol MainScreenInteractorOutput: class {
 
+    func didSaveNote(_ note: Note)
+    func didUpdateNote(_ note: Note)
+    func didObtainNotes(_ notes: [Note])
+    func didDeleteNote()
 }

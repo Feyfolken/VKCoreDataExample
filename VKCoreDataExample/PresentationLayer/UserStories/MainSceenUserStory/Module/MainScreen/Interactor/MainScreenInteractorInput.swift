@@ -10,4 +10,8 @@ import Foundation
 
 protocol MainScreenInteractorInput {
 
+    func obtainNotes()
+    func saveNote(with text: String)
+    func updateNote(_ note: Note)
+    func deleteNote(_ note: Note)
 }
